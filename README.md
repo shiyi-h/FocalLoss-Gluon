@@ -11,8 +11,12 @@ Refer to Kaiming He's FocalLoss and use mxnet's gluon API to write a gluon versi
 # How to use
 x = mx.nd.array([[1,2,3],[4,5,6],[9,8,7]])  
 
-label = mx.nd.array([[1],[2],[0]])
-alpha = [1,2,3]
-loss = FocalLoss(alpha=alpha)
-loss.hybridize()
+label = mx.nd.array([[1],[2],[0]])  
+
+alpha = [1,2,3]  
+
+loss = FocalLoss(alpha=alpha)  
+
+loss.hybridize()  
+
 print(loss(x,label))
